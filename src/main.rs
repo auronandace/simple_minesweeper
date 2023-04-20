@@ -154,7 +154,7 @@ impl std::fmt::Display for Minefield {
             match square.edge {
                 Edge::TopLeft | Edge::Left | Edge::BottomLeft => {
                     if let Edge::TopLeft = square.edge {rows.push_str(&dashes);}
-                    rows.push(LOWER[(row - 1)]);
+                    rows.push(LOWER[row - 1]);
                     rows.push('|');
                     rows.push_str(&square.to_string());
                     rows.push('|');
@@ -162,7 +162,7 @@ impl std::fmt::Display for Minefield {
                 Edge::TopRight | Edge::Right | Edge::BottomRight => {
                     rows.push_str(&square.to_string());
                     rows.push('|');
-                    rows.push(LOWER[(row - 1)]);
+                    rows.push(LOWER[row - 1]);
                     rows.push('\n');
                     rows.push_str(&dashes);
                     row += 1;
