@@ -189,7 +189,7 @@ impl Square {
         Self {mine, opened: false, flagged: false, edge}
     }
     fn toggle_flag(&mut self) -> bool {
-        if self.flagged {self.flagged = false;} else {self.flagged = true;}
+        self.flagged = !self.flagged;
         self.flagged
     }
 }
